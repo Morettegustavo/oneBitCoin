@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react';
-import { Text, View, ScrollView, TouchableOpacity, FlatList } from 'react-native';
+import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './style/'
 import QuotationsItems from './QuotationsItems/';
+import { ScrollView } from 'react-native-virtualized-view';
+
 
 export default function QuotationsList(props) {
     const daysQuery = props.filterDay;
