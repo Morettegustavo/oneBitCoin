@@ -3,6 +3,7 @@ import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './style/'
 import QuotationsItems from './QuotationsItems/';
 import { ScrollView } from 'react-native-virtualized-view';
+import ButtonQuery from '../Buttons/ButtonQuery/Index';
 
 
 export default function QuotationsList(props) {
@@ -11,36 +12,35 @@ export default function QuotationsList(props) {
     return (
         <Fragment>
             <View style={styles.filters}>
-                <TouchableOpacity
-                    style={styles.buttonQuery}
+                <ButtonQuery
                     onPress={() => daysQuery(7)}
                 >
-                    <Text style={styles.textButtonQuery}>7D</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.buttonQuery}
+                    7D
+                </ButtonQuery>
+
+                <ButtonQuery
                     onPress={() => daysQuery(15)}
                 >
-                    <Text style={styles.textButtonQuery}>15D</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.buttonQuery}
+                    15D
+                </ButtonQuery>
+
+                <ButtonQuery
                     onPress={() => daysQuery(30)}
                 >
-                    <Text style={styles.textButtonQuery}>1M</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.buttonQuery}
+                    1M
+                </ButtonQuery>
+
+                <ButtonQuery
                     onPress={() => daysQuery(90)}
                 >
-                    <Text style={styles.textButtonQuery}>3M</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.buttonQuery}
+                    3M
+                </ButtonQuery>
+        
+                <ButtonQuery
                     onPress={() => daysQuery(180)}
                 >
-                    <Text style={styles.textButtonQuery}>6M</Text>
-                </TouchableOpacity>
+                    6M
+                </ButtonQuery>
             </View>
             <ScrollView>
                 <FlatList

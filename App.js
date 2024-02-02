@@ -12,16 +12,15 @@ function addZero(number) {
   return number;
 }
 
-function url(qtdDays) {
+function url(listLastDays) {
   const date = new Date();
-  const listLastDays = qtdDays;
-  const endDate = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDay())}`;
-  /* Ele seta a data com a data atual menos a quantidade de dias que foi passado como parametro  */
-  date.setDate(date.getDate() - listLastDays)
-  const startDate = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDay())}`;
-
+  const endDate = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())}`;
+  date.setDate(date.getDate() - listLastDays);
+  const startDate = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())}`;
+  
   return `https://api.coindesk.com/v1/bpi/historical/close.json?start=${startDate}&end=${endDate}`;
 }
+
 
 async function getListCoins(url) {
   let response = await fetch(url);
@@ -57,7 +56,6 @@ export default function App() {
   const [updateData, setUpdateData] = useState(true);
 
   function updateDay(number) {
-    console.log(number);
     setDays(number);
     setUpdateData(true);
   }
@@ -71,7 +69,7 @@ export default function App() {
       setCoinsGraphicList(data);
     })
 
-    if(updateData) {
+    if (updateData) {
       setUpdateData(false);
     }
 
