@@ -13,3 +13,6 @@ App que exibe cotações em tempo real do Bitcoin, fornecendo informações deta
 - [x] Manipulação de data
 - [x] Utilização de filtros
 - [x] Ciclo de vida dos components
+
+***
+<img src="https://github.com/Morettegustavo/oneBitCoin/assets/88351614/57cf52f4-98f7-4e50-b66e-ef449360b200" height="500rem"/>
