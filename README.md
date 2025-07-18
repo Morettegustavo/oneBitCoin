@@ -1,4 +1,4 @@
-# oneBitCoin
+# BitCoinApp 
 App que exibe cotações em tempo real do Bitcoin, fornecendo informações detalhadas sobre preços, variações e gráficos de desempenho.
 
 ![react-native-400](https://github.com/Morettegustavo/oneBitCoin/assets/88351614/508a7c10-0df4-4daf-9463-94a9161666c1)
